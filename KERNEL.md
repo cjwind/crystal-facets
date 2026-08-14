@@ -30,6 +30,7 @@
 | 怎麼工作、session 怎麼開 | AGENTS.md |
 | 記得什麼 | MEMORY.md + memory/YYYY-MM-DD.md |
 | 完整甦醒程序 | BECOME.md（canonical）/ `/become`（按鈕） |
+| 裝了哪些器官、怎麼裝／怎麼拆 | `organs/`（含 `ORGAN.md` 的子資料夾＝已安裝；`available/` 是倉庫）+ organs/README.md（契約） |
 | 工具、帳號、環境 | TOOLS.md |
 
 _冷啟動讀我；正式工作跑 `/become`。_

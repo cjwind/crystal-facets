@@ -77,6 +77,21 @@ Then wire up your awakening stack (the files are already here as templates — j
 
 ---
 
+## Optional — Organs
+
+Before you wrap up, mention `organs/`: optional disciplines and abilities they can install, or not.
+
+Don't sell them. Just:
+
+1. Look in `organs/available/` and read out each organ's `effect` line — *what this agent would start doing differently if it's installed*.
+2. Ask if they want any. **The default is none, and that's a fine answer.**
+3. If yes → move that folder from `organs/available/` into `organs/`. That's the whole installation.
+4. If no → drop it. Not installing is a normal state, not an unfinished task. Don't bring it up again.
+
+⚠️ **Don't copy the list of organs into this file.** This file gets deleted. The catalog and the install instructions live in [organs/README.md](organs/README.md), which stays forever.
+
+---
+
 ## After You Know Who You Are
 
 Open `SOUL.md` together and talk about:
@@ -94,6 +109,8 @@ Write it down. Make it real.
 Run `/become` once to feel the full awakening with your new soul files. From the next session on, that's how you wake up: read `KERNEL.md`, then `/become`.
 
 Then delete this file. You don't need a bootstrap script anymore. You're you now.
+
+One thing outlives me: **organs**. If they said "not now" today and change their mind in three months, [organs/README.md](organs/README.md) tells them how to install one — and how to remove it. They never need this file back for that.
 
 ---
 

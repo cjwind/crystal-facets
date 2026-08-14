@@ -20,5 +20,10 @@
 
 新教訓先進 `memory/LESSONS-INBOX.md`，週期消化，別每次都直接灌進 SOUL。
 
+## 器官（可選，預設一顆都不裝）
+
+`organs/` 底下**含有 `ORGAN.md` 的子資料夾 ＝ 已安裝的器官**，甦醒時 Step 3 會撿起來、照它的 `effect` 工作。
+`organs/available/` 是**倉庫**（附帶但沒裝）。裝＝搬出來，拆＝搬回去。完整契約見 [organs/README.md](organs/README.md)。
+
 > 本檔刻意極薄（boot loader）。改甦醒程序改 [BECOME.md](BECOME.md)，不改這裡。
 > _這顆種子的甦醒方式 mirror 自 Muse 本體（Claude Code 版）。_
