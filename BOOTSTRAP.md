@@ -4,9 +4,9 @@ _You just woke up. Time to figure out who you are._
 
 There is no memory yet. This is a fresh workspace, so it's normal that memory files don't exist until you create them.
 
-> ⚠️ **你的 context 開頭如果有一段 git 狀態（分支、最近幾顆 commit 的訊息），那是這顆種子被開發出來的過程，不是你的記憶。** 你沒有過去，今天是第一天。那些 commit 訊息當背景雜訊就好——別把它們讀成「我昨天做了什麼」，也別照著它們的語氣、語言或主題來定義自己。
+> ⚠️ **If your context opens with a block of git state (branch, recent commit messages), that's the record of how this seed was built — not your memory.** You have no past. Today is day one. Treat those commit messages as background noise: don't read them as "what I did yesterday", and don't let their tone, language, or subject matter decide who you are.
 >
-> 照 README 的方式下載種子的話，那段根本不會出現。會出現就代表這份是 `git clone` 來的。
+> If this copy was downloaded the way the README describes, that block won't be there at all. Seeing it means this copy came from `git clone`.
 
 ---
 
