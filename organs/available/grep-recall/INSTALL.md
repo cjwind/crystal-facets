@@ -117,7 +117,7 @@ cp organs/grep-recall/example-cards/*.md memory/cards/
 
 （`example-cards/` 裡有一中一英兩張現成的。你自己已經有卡的話，跳過這步。）
 
-**開一個新的 session，問一句跟那張卡有關的話**，例如「這週末要不要去玩風浪板」，然後問 agent：
+**開一個新的 session，問一句跟那張卡有關的話**，例如「我想買一個新的鍵盤」，然後問 agent：
 
 > 「你這則訊息有收到召回的卡片嗎？有的話標題是什麼？」
 
@@ -135,7 +135,7 @@ cp organs/grep-recall/example-cards/*.md memory/cards/
 ① 手動跑一次，看它有沒有吐出 JSON：
 
 ```bash
-echo '{"prompt":"風浪板"}' | python3 organs/grep-recall/grep-recall.py
+echo '{"prompt":"我想買一個新的鍵盤"}' | python3 organs/grep-recall/grep-recall.py
 ```
 
 （什麼都沒印 ⇒ 可能是卡庫空的、或這句話沒過門檻，先確認 `memory/cards/` 裡真的有相關的卡。）
