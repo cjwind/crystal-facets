@@ -50,12 +50,17 @@ claude --version
 
 ### 1.3 建立 workspace（種下晶種）
 
-把這顆種子 clone 成使用者自己的 workspace：
+把這顆種子**下載**成使用者自己的 workspace（不要 `git clone`——clone 會把種子的開發史帶進出生現場，理由見 [`README.md`](./README.md) 〈為什麼是下載，不是 `git clone`〉）：
 
 ```bash
-git clone https://github.com/frank890417/muse-crystal-seed.git ~/my-agent
+curl -L https://github.com/cjwind/crystal-facets/archive/refs/heads/main.tar.gz | tar xz
+mv crystal-facets-main ~/my-agent
 cd ~/my-agent
 ```
+
+> 現場沒有終端機習慣的話，GitHub 頁面 `Code → Download ZIP` 也一樣。⚠️ macOS Finder 預設不顯示 `.claude`，`Cmd+Shift+.` 打開。
+>
+> 這時候還不是 git repo，**這是故意的**。版控在 Phase 3.3 出生完之後才接上。
 
 裡面已經有 `CLAUDE.md`（開機層，Claude Code 自動載入）、`.claude/skills/`（含 `/become`、收官、自我進化）、各靈魂檔模板。
 
@@ -151,8 +156,9 @@ Claude Code 本身就是終端機裡的對話介面。也可以：
 
 ```bash
 cd ~/my-agent
-git remote set-url origin https://github.com/<你的帳號>/<你的-agent-repo>.git
+git init -b main
 git add -A && git commit -m "my crystal seed"
+git remote add origin https://github.com/<你的帳號>/<你的-agent-repo>.git
 git push -u origin main
 ```
 

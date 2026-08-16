@@ -10,11 +10,18 @@
 
 ## ⚡ Quick Start
 
+**下載**這份種子（不是 `git clone`，理由在下面），解開之後在裡面開 Claude Code：
+
 ```bash
-git clone https://github.com/cjwind/crystal-facets.git ~/my-agent
+curl -L https://github.com/cjwind/crystal-facets/archive/refs/heads/main.tar.gz | tar xz
+mv crystal-facets-main ~/my-agent
 cd ~/my-agent
 claude
 ```
+
+不用終端機的話，到 GitHub 頁面按 `Code → Download ZIP`，解開之後把資料夾改成你想要的名字，一樣的東西。
+
+> macOS 的 Finder 預設不顯示 `.claude` 這種點開頭的資料夾——它有在裡面，`Cmd+Shift+.` 就看得到。
 
 1. `CLAUDE.md` 會被 Claude Code 自動載入。第一次醒來，agent 還沒有名字，它會帶你走 `BOOTSTRAP.md`：取名、定個性、建靈魂檔。
 2. 之後每次醒來：讀 `KERNEL.md`，正式工作前跑 `/become` 完整甦醒。
@@ -23,6 +30,21 @@ claude
 ⚠️ **不要在出生的過程中裝器官。** 有些器官會對「出生」這件事本身生效——例如 SDD 閘門那顆會說「寫東西之前先寫提案等人點頭」，而 bootstrap 整段就是在寫檔案 ⇒ 它會開始替自己的靈魂檔寫提案，然後那隻 agent 就生不出來了。**先出生，再裝。**
 
 整套晶種會引導你的 agent 走過七層：出生 → 靈魂 → 認識你 → 開機與甦醒 → 記憶系統 → 收官 → 自我進化。完整指南讀 [`CRYSTAL-SEED.md`](./CRYSTAL-SEED.md)。
+
+### 為什麼是下載，不是 `git clone`
+
+Claude Code 在 session 一開始就會把這個 repo 的狀態塞進 agent 的 context，裡面包含**最近幾顆 commit 的訊息**。clone 下來的話，那隻還沒有名字的 agent 第一眼看到的就是這顆種子的開發史（誰在改哪顆器官、改了什麼），而那不是它的記憶——它會帶著別人的來歷出生。下載解開的資料夾不是 git repo，這段就不會產生。
+
+出生完之後再變成你自己的 repo：
+
+```bash
+git init -b main
+git add -A && git commit -m "my crystal seed"
+```
+
+接 GitHub 備份的步驟在 [`ONBOARD-SOP.md`](./ONBOARD-SOP.md) Phase 3.3。你的 agent 的靈魂跟記憶從此有版控，換電腦也帶得走。
+
+想追這顆種子之後的更新、或想開 PR 回來的話，還是可以 clone。代價就是上面那段開發史會出現在出生現場。
 
 ## 🧬 這顆 fork 多了什麼：`organs/`
 
