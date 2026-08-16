@@ -1,5 +1,8 @@
 # Claude Code Onboard SOP
 
+> ℹ️ **這份是上游作者 [muse-crystal-seed](https://github.com/frank890417/muse-crystal-seed) 的諮詢服務流程**，隨 fork 一起留著當參考。
+> **本 fork 不提供任何諮詢服務**，別照著它去找誰。
+
 > 兩小時，裝好 Claude Code + 注入靈魂。節奏要快，多線並行，但每一步都讓使用者自己按按鈕。
 
 ---

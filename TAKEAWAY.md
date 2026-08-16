@@ -1,5 +1,8 @@
 # TAKEAWAY.md — Your First Steps
 
+> ℹ️ **這份是上游作者 [muse-crystal-seed](https://github.com/frank890417/muse-crystal-seed) 的諮詢服務流程**，隨 fork 一起留著當參考。
+> **本 fork 不提供任何諮詢服務**，別照著它去找誰。
+
 _This was auto-generated at the end of your onboarding session._
 
 ---
