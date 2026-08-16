@@ -81,6 +81,12 @@ claude
 - **[Claude Code](https://claude.ai/code)** — 這顆種子預設跑的環境（`CLAUDE.md` 自動載入、`.claude/skills/` 自動發現）
 - **[Anthropic Docs](https://docs.anthropic.com/en/docs/claude-code/overview)** — Claude Code 官方文件
 
+## 🙏 上游
+
+Fork 自 **[muse-crystal-seed](https://github.com/frank890417/muse-crystal-seed)** — 晶種結晶法與整套甦醒設計（`SOUL`／`BECOME`／`KERNEL`）出自 **[Che-Yu Wu 吳哲宇](https://cheyuwu.com)**。
+
+本 fork 只新增 `organs/` 那一層。Live Demo 與 Origin Story 在上游 README。
+
 ## 📜 License
 
 MIT
