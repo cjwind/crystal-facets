@@ -1,7 +1,7 @@
 ---
 organ: memory-cards
 summary: 把長期記憶從「一份大檔」改成「一堆一句話的小卡」，`MEMORY.md` 降級成索引
-effect: 要留住的耐久結論，寫成一張獨立的卡放進 `memory/cards/`——一張卡一個 claim，檔案第一行就是那句完整的 claim；`MEMORY.md` 只放索引（每張卡一行標題＋連結），不放內容；每日日記維持流水帳，不原子化
+effect: 收工（`after-action`）或跑自我進化（`self-evolution`）時，把這輪要留住的耐久結論沉澱成卡——一張卡一個 claim，獨立檔放進 `memory/cards/`，檔案第一行就是那句完整的 claim；`MEMORY.md` 只放索引（每張卡一行標題＋連結），不放內容；每日日記維持流水帳，不原子化
 install: none
 ---
 
@@ -102,6 +102,40 @@ install: none
 4. 等 `MEMORY.md` 裡剩下的都是索引行了，它就自然變成索引檔了。**沒有一個要一鼓作氣完成的搬家日。**
 
 ⚠️ 這幾步是一個可行的走法，不是唯一解。你想直接重寫 `MEMORY.md` 也可以。
+
+⚠️ 種子還有**兩顆 skill** 也會往 `MEMORY.md` 寫東西——見下面〈跟骨架那兩顆 skill 是什麼關係〉。
+
+## 什麼時候沉澱
+
+**收工的時候。**
+
+種子自帶的 `after-action` skill 就是那個位置——它的觸發詞是「收官／歸檔／wrap up」，做的事是回顧這輪發生了什麼、抽出教訓、寫檔。這顆器官只改其中一件事：**抽出來的耐久結論寫成卡，不是灌進 `MEMORY.md`。**
+
+⭐ **不需要去掛任何排程。** 收工這個動作本來就會發生，沉澱搭它的便車。
+
+⚠️ 種子另外自帶一顆 `self-evolution` skill，它的 frontmatter 建議用 `/schedule` 或 cron 掛成每晚跑。**那是加分項，不是這顆器官的前提**——想掛的人去看 `HEARTBEAT.md`，那邊已經寫了怎麼掛，這裡不重寫一份（兩份講法一定會漂移）。
+
+> **為什麼落點是「收工」而不是「每晚」**
+>
+> 「每晚」需要一個**在 agent 沒開著時也會動**的東西，而那種東西一定住在使用者的環境裡：雲端 routine 綁使用者帳號、而且多半要 repo 已經在 GitHub 上；OS 的 cron 要機器開著，Windows 還沒有。**兩種都不在 repo 裡，器官塞不進去。**
+>
+> 收工不一樣：那個時刻 agent 還活著、檔案都在手上，什麼都不必先裝。
+
+## 跟骨架那兩顆 skill 是什麼關係
+
+種子自帶的 `self-evolution` 與 `after-action` 都會寫長期記憶，而它們寫的是**種子原本的形狀**——沉澱物直接進 `MEMORY.md`。裝了這顆器官之後，那幾句話要換一種讀法。
+
+⛔ **不要去改那兩個檔。** 它們是骨架的核心檔，改掉之後上游的更新就吃不到了。下面這張表是拿來對照的，不是拿來當 patch 用的：
+
+| 檔案 | 位置 | 它原本說 | 裝了這顆之後讀成 |
+|---|---|---|---|
+| `self-evolution/SKILL.md` | §Separate concerns | `MEMORY.md = what happened, what was learned` | `MEMORY.md` ＝ **卡的索引**；「發生了什麼、學到什麼」的內容住在 `memory/cards/` |
+| `self-evolution/SKILL.md` | §Update Order 鏈上的 `→ MEMORY.md (memory snapshot)` | 更新 `MEMORY.md` | 拆成兩個動作：**先寫／更新那張卡**，再回 `MEMORY.md` 加或改索引那一行 |
+| `after-action/SKILL.md` | §Step 3: Archive 第 2 項 `Long-term memory` | 重要的事寫進 `MEMORY.md`（新認知突破／重要決策與脈絡／系統性改變） | 那三種東西**各自成一張卡**放進 `memory/cards/`，`MEMORY.md` 只多索引那幾行 |
+
+⭐ **同一節的第 1 項 `Daily log` 不用改**——它說日記寫進 `memory/YYYY-MM-DD.md`，跟上面〈日記不在這套裡〉本來就一致。⇒ 別因為第 2 項要改讀法，就以為整個 Step 3 都要重寫。
+
+⚠️ **已經裝過這顆器官的人**：這一版改的全是文件，**下次甦醒讀到就生效**，不用重裝、不用跑任何步驟。（這是一級器官的好處：沒有第二個地方要同步。）
 
 ## 一個 claim 後來被推翻了怎麼辦
 
