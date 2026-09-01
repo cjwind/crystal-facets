@@ -54,17 +54,21 @@ git add -A && git commit -m "my crystal seed"
 
 一顆器官 ＝ 一個資料夾 ＋ 一份 `ORGAN.md`。**在 `organs/available/` 底下＝附帶但沒裝；直接在 `organs/` 底下＝裝了。** 裝一顆就是把資料夾搬出來，拆一顆就是搬回去。
 
-### 現成的兩顆
+### 現成的四顆
 
 | 器官 | 裝了之後這隻 agent 會多做什麼 | 它在解什麼問題 |
 |---|---|---|
 | **`sdd-gate`** | 收到「寫功能／改東西／修 bug」的要求時**不直接動手**，先寫提案＋可打勾的任務清單＋白話驗收條件，貼重點給你，停下來等你說「開始實作」 | agent 很會跳下去就寫。這顆逼它先把要做什麼講清楚，你點頭才動 |
 | **`time-gate`** | 要寫日期／時間戳／檔名時，抄每則訊息開頭那行 date 驗過的真實時間，**不憑對話長度估** | LLM 沒有內建時鐘。沒有它的時候 agent 不會說「我不知道現在幾點」，它會**估**——而估出來的時間戳跟真的長得一模一樣，寫進日記就再也分不出來 |
+| **`memory-cards`** | 收工時把這輪要留住的耐久結論寫成**一張卡一個 claim**，放進 `memory/cards/`；`MEMORY.md` 降級成索引（每張卡一行標題＋連結），不放內容 | 長期記憶擠在一份大檔裡，會越長越糊：找不到、不敢刪、每次冷啟動整份載進去。拆成小卡之後，冷啟動讀索引拿 gist，要細節才拉那一張 |
+| **`grep-recall`** | 每則訊息開頭自動收到幾張**可能相關**的記憶卡標題，當待驗線索用——用之前先開原檔驗，不相關就忽略 | 寫下來的東西找不回來就等於沒寫。這顆讓卡片自己回來找你，而不是等你想起「我好像記過這個」 |
+
+ℹ️ `grep-recall` 的檔頭寫著 `requires: memory-cards` —— 它讀得懂任何卡，但**卡怎麼寫才好找**是 `memory-cards` 定義的。那是提醒不是前置條件：少了它 `grep-recall` 照樣跑，只是效力打折。
 
 ### 兩級器官
 
-- **第一級（`install: none`）**：全部內容就是「給 agent 讀的字」。搬進 `organs/` 就生效。`sdd-gate` 是這種。
-- **第二級（`install: agent`）**：還帶著要跑的東西（腳本、要註冊的 hook）。除了搬資料夾，還要照它的 `INSTALL.md` 裝。`time-gate` 是這種。
+- **第一級（`install: none`）**：全部內容就是「給 agent 讀的字」。搬進 `organs/` 就生效。`sdd-gate`、`memory-cards` 是這種。
+- **第二級（`install: agent`）**：還帶著要跑的東西（腳本、要註冊的 hook）。除了搬資料夾，還要照它的 `INSTALL.md` 裝。`time-gate`、`grep-recall` 是這種。
 
 完整契約（怎麼裝、怎麼拆、怎麼自己長一顆）在 [`organs/README.md`](./organs/README.md)。
 
@@ -88,6 +92,8 @@ git add -A && git commit -m "my crystal seed"
 ├── organs/              # 🧬 本 fork 新增：器官契約
 │   ├── README.md        #    契約（怎麼裝、怎麼拆、怎麼自己長一顆）
 │   └── available/       #    倉庫：附帶但還沒裝的器官
+│       ├── grep-recall/
+│       ├── memory-cards/
 │       ├── sdd-gate/
 │       └── time-gate/
 ├── .claude/
